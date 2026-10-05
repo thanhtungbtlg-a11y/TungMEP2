@@ -1,0 +1,27 @@
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>obj\DirectYGeometryConsoleTest\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>$(BaseIntermediateOutputPath)</MSBuildProjectExtensionsPath>
+    <BaseOutputPath>bin\DirectYGeometryConsoleTest\</BaseOutputPath>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>12.0</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DirectYGeometryConsoleTest.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\DirectY\DirectYGeometry.cs" Link="DirectYGeometry.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\DirectY\DirectYArticulation.cs" Link="DirectYArticulation.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\DirectY\DirectYGuards.cs" Link="DirectYGuards.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\DirectY\DirectYInsertionGeometry.cs" Link="DirectYInsertionGeometry.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\DirectY\DirectYCleanupPolicy.cs" Link="DirectYCleanupPolicy.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\DirectY\DirectYBindingDiagnostic.cs" Link="DirectYBindingDiagnostic.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\DirectY\DirectYInternalBindingGeometry.cs" Link="DirectYInternalBindingGeometry.cs" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

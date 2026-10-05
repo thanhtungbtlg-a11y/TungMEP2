@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AutoTagPipeCollisionLayoutConsoleTest.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Commands\FF\AutoTagPipeCollisionLayout.cs"
+             Link="AutoTagPipeCollisionLayout.cs" />
+  </ItemGroup>
+</Project>

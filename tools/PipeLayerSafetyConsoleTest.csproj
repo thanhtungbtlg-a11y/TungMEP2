@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>obj\PipeLayerSafetyConsoleTest\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>$(BaseIntermediateOutputPath)</MSBuildProjectExtensionsPath>
+    <BaseOutputPath>bin\PipeLayerSafetyConsoleTest\</BaseOutputPath>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>12.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PipeLayerSafetyConsoleTest.cs" />
+    <Compile Include="PipeLayerRevitContractDouble.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\PipeLayerRunner.cs" Link="PipeLayerRunner.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\PipeLayerSafety.cs" Link="PipeLayerSafety.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\PipeLayerMath.cs" Link="PipeLayerMath.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\PipeLayerModeDialog.cs" Link="PipeLayerModeDialog.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\FitSpace\FitSpaceConnectorService.cs" Link="FitSpaceConnectorService.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\FitSpace\FitSpaceRevitModel.cs" Link="FitSpaceRevitModel.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\FitSpace\FitSpaceMath.cs" Link="FitSpaceMath.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\FitSpace\FitSpaceModel.cs" Link="FitSpaceModel.cs" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

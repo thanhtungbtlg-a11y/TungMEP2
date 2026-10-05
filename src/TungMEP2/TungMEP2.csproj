@@ -1,0 +1,280 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>TungMEP2</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <Revit2024Path Condition="'$(Revit2024Path)' == ''">C:\Program Files\Autodesk\Revit 2024</Revit2024Path>
+    <OutputPath>..\..\build\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>$(NoWarn);CS8632;CS0618</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\Store\**\*" Link="Store\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ui\ui_alignviewportswindow.baml" />
+    <None Remove="ui\ui_griddimensionoptionswindow.baml" />
+    <None Remove="resources\icons\setstt_32.png" />
+    <None Remove="ui\ui_excellegendcheckerwindow.baml" />
+    <None Remove="resources\icons\setstt_16.png" />
+    <None Remove="ui\ui_duplicatesheetswindow.baml" />
+    <None Remove="resources\icons\down45arrow_16.png" />
+    <None Remove="ui\ui_sectionboxslidewindow.baml" />
+    <None Remove="resources\icons\left45arrow_16.png" />
+    <None Remove="ui\ui_templatewindow.baml" />
+    <None Remove="resources\icons\down45arrow_32.png" />
+    <None Remove="resources\icons\left45arrow_32.png" />
+    <None Remove="resources\icons\sk_32.png" />
+    <None Remove="resources\icons\sk_16.png" />
+    <None Remove="ui\ui_printsheetswindow.baml" />
+    <None Remove="resources\icons\minuss_16.png" />
+    <None Remove="resources\icons\minuss_32.png" />
+    <None Remove="ui\ui_dwgopenreloadwindow.baml" />
+    <None Remove="resources\icons\fixpipe_16.png" />
+    <None Remove="ui\ui_temporaryplaneoffsetwindow.baml" />
+    <None Remove="resources\icons\fixpipe_32.png" />
+    <None Remove="resources\icons\autoadjusttags_16.png" />
+    <None Remove="ui\ui_excellegendlinksyncwindow.baml" />
+    <None Remove="resources\icons\autoadjusttags_32.png" />
+    <None Remove="resources\icons\createprintset_16.png" />
+    <None Remove="resources\icons\createprintset_32.png" />
+    <None Remove="ui\ui_copycropviewwindow.baml" />
+    <None Remove="resources\icons\putviewsinsheet_16.png" />
+    <None Remove="resources\icons\putviewsinsheet_32.png" />
+    <None Remove="resources\icons\right45arrow_32.png" />
+    <None Remove="resources\icons\syncview_16.png" />
+    <None Remove="resources\icons\temporaryplane_32.png" />
+    <None Remove="resources\icons\avoidmep_32.png" />
+    <None Remove="resources\icons\e9045_32.png" />
+    <None Remove="resources\icons\fittingrotate_16.png" />
+    <None Remove="resources\icons\syncview_32.png" />
+    <None Remove="resources\icons\right45arrow_16.png" />
+    <None Remove="ui\ui_transtempwindow.baml" />
+    <None Remove="resources\icons\temporaryplane_16.png" />
+    <None Remove="resources\icons\avoidmep_16.png" />
+    <None Remove="resources\icons\e9045_16.png" />
+    <None Remove="resources\icons\fittingrotate_32.png" />
+    <None Remove="resources\icons\connectto16.png" />
+    <None Remove="resources\icons\cropviewport_16.png" />
+    <None Remove="resources\icons\up45arrow_32.png" />
+    <None Remove="resources\icons\connectto32.png" />
+    <None Remove="resources\icons\cropviewport_32.png" />
+    <None Remove="ui\ui_selectelementsbylevelactionwindow.baml" />
+    <None Remove="resources\icons\up45arrow_16.png" />
+    <None Remove="resources\icons\titlecheck_16.png" />
+    <None Remove="resources\icons\savesyncview_16.png" />
+    <None Remove="resources\icons\titlecheck_32.png" />
+    <None Remove="resources\icons\savesyncview_32.png" />
+    <None Remove="resources\icons\down90arrow_16.png" />
+    <None Remove="resources\icons\asheets_32.png" />
+    <None Remove="resources\icons\down90arrow_32.png" />
+    <None Remove="resources\icons\asheets_16.png" />
+    <None Remove="resources\icons\dsheets_32.png" />
+    <None Remove="resources\icons\vent_32.png" />
+    <None Remove="resources\icons\dsheets_16.png" />
+    <None Remove="resources\icons\ey_32.png" />
+    <None Remove="resources\icons\vent_16.png" />
+    <None Remove="resources\icons\ey_16.png" />
+    <None Remove="resources\icons\disvent_16.png" />
+    <None Remove="ui\ui_autodimcachesettingswindow.baml" />
+    <None Remove="resources\icons\lineweight_16.png" />
+    <None Remove="ui\ui_3dsyncwindow.baml" />
+    <None Remove="resources\icons\disvent_32.png" />
+    <None Remove="resources\icons\pluss_32.png" />
+    <None Remove="resources\icons\lineweight_32.png" />
+    <None Remove="resources\icons\dwg_32.png" />
+    <None Remove="resources\icons\pluss_16.png" />
+    <None Remove="resources\icons\dwg_16.png" />
+    <None Remove="resources\icons\align3d32.png" />
+    <None Remove="resources\icons\align3d16.png" />
+    <None Remove="resources\icons\up90arrow_32.png" />
+    <None Remove="resources\icons\up90arrow_16.png" />
+    <None Remove="ui\ui_gridplaceelementsettingswindow.baml" />
+    <None Remove="ui\ui_findreplaceparameterwindow.baml" />
+    <None Remove="ui\ui_selectbyidswindow.baml" />
+    <None Remove="ui\ui_selectelementsbylevelscopewindow.baml" />
+    <None Remove="ui\ui_autotagpipewindow.baml" />
+    <None Remove="ui\ui_selectlevelwindow.baml" />
+    <None Remove="resources\icons\layerpipe_16.png" />
+    <None Remove="resources\icons\layerpipe_32.png" />
+    <None Remove="ui\ui_copygridviewfloorwindow.baml" />
+    <None Remove="ui\ui_changesheettitleblocktypewindow.baml" />
+    <None Remove="resources\icons\ribbonicon16.png" />
+    <None Remove="resources\icons\excel_16.png" />
+    <None Remove="resources\icons\ribbonicon32.png" />
+    <None Remove="ui\ui_putviewsinsheetwindow.baml" />
+    <None Remove="resources\icons\extendfitting16.png" />
+    <None Remove="resources\icons\excel_32.png" />
+    <None Remove="ui\ui_rerouteunderoverwindow.baml" />
+    <None Remove="resources\icons\extendfitting32.png" />
+    <None Remove="resources\icons\printer_16.png" />
+    <None Remove="resources\icons\setworkset_32.png" />
+    <None Remove="resources\icons\printer_32.png" />
+    <None Remove="resources\icons\setworkset_16.png" />
+    <None Remove="ui\ui_copyvgwindow.baml" />
+    <None Remove="ui\ui_convertdraftingtolegendwindow.baml" />
+    <Resource Include="ui\ui_alignviewportswindow.baml" LogicalName="ui/ui_alignviewportswindow.baml" />
+    <Resource Include="ui\ui_griddimensionoptionswindow.baml" LogicalName="ui/ui_griddimensionoptionswindow.baml" />
+    <Resource Include="resources\icons\setstt_32.png" LogicalName="resources/icons/setstt_32.png" />
+    <Resource Include="ui\ui_excellegendcheckerwindow.baml" LogicalName="ui/ui_excellegendcheckerwindow.baml" />
+    <Resource Include="resources\icons\setstt_16.png" LogicalName="resources/icons/setstt_16.png" />
+    <Resource Include="ui\ui_duplicatesheetswindow.baml" LogicalName="ui/ui_duplicatesheetswindow.baml" />
+    <Resource Include="resources\icons\down45arrow_16.png" LogicalName="resources/icons/down45arrow_16.png" />
+    <Resource Include="ui\ui_sectionboxslidewindow.baml" LogicalName="ui/ui_sectionboxslidewindow.baml" />
+    <Resource Include="resources\icons\left45arrow_16.png" LogicalName="resources/icons/left45arrow_16.png" />
+    <Resource Include="ui\ui_templatewindow.baml" LogicalName="ui/ui_templatewindow.baml" />
+    <Resource Include="resources\icons\down45arrow_32.png" LogicalName="resources/icons/down45arrow_32.png" />
+    <Resource Include="resources\icons\left45arrow_32.png" LogicalName="resources/icons/left45arrow_32.png" />
+    <Resource Include="resources\icons\sk_32.png" LogicalName="resources/icons/sk_32.png" />
+    <Resource Include="resources\icons\sk_16.png" LogicalName="resources/icons/sk_16.png" />
+    <Resource Include="resources\icons\minuss_16.png" LogicalName="resources/icons/minuss_16.png" />
+    <Resource Include="resources\icons\minuss_32.png" LogicalName="resources/icons/minuss_32.png" />
+    <Resource Include="ui\ui_dwgopenreloadwindow.baml" LogicalName="ui/ui_dwgopenreloadwindow.baml" />
+    <Resource Include="resources\icons\fixpipe_16.png" LogicalName="resources/icons/fixpipe_16.png" />
+    <Resource Include="ui\ui_temporaryplaneoffsetwindow.baml" LogicalName="ui/ui_temporaryplaneoffsetwindow.baml" />
+    <Resource Include="resources\icons\fixpipe_32.png" LogicalName="resources/icons/fixpipe_32.png" />
+    <Resource Include="resources\icons\autoadjusttags_16.png" LogicalName="resources/icons/autoadjusttags_16.png" />
+    <Resource Include="ui\ui_excellegendlinksyncwindow.baml" LogicalName="ui/ui_excellegendlinksyncwindow.baml" />
+    <Resource Include="resources\icons\autoadjusttags_32.png" LogicalName="resources/icons/autoadjusttags_32.png" />
+    <Resource Include="resources\icons\createprintset_16.png" LogicalName="resources/icons/createprintset_16.png" />
+    <Resource Include="resources\icons\createprintset_32.png" LogicalName="resources/icons/createprintset_32.png" />
+    <Resource Include="ui\ui_copycropviewwindow.baml" LogicalName="ui/ui_copycropviewwindow.baml" />
+    <Resource Include="resources\icons\putviewsinsheet_16.png" LogicalName="resources/icons/putviewsinsheet_16.png" />
+    <Resource Include="resources\icons\putviewsinsheet_32.png" LogicalName="resources/icons/putviewsinsheet_32.png" />
+    <Resource Include="resources\icons\right45arrow_32.png" LogicalName="resources/icons/right45arrow_32.png" />
+    <Resource Include="resources\icons\syncview_16.png" LogicalName="resources/icons/syncview_16.png" />
+    <Resource Include="resources\icons\temporaryplane_32.png" LogicalName="resources/icons/temporaryplane_32.png" />
+    <Resource Include="resources\icons\avoidmep_32.png" LogicalName="resources/icons/avoidmep_32.png" />
+    <Resource Include="resources\icons\e9045_32.png" LogicalName="resources/icons/e9045_32.png" />
+    <Resource Include="resources\icons\fittingrotate_16.png" LogicalName="resources/icons/fittingrotate_16.png" />
+    <Resource Include="resources\icons\syncview_32.png" LogicalName="resources/icons/syncview_32.png" />
+    <Resource Include="resources\icons\right45arrow_16.png" LogicalName="resources/icons/right45arrow_16.png" />
+    <Resource Include="ui\ui_transtempwindow.baml" LogicalName="ui/ui_transtempwindow.baml" />
+    <Resource Include="resources\icons\temporaryplane_16.png" LogicalName="resources/icons/temporaryplane_16.png" />
+    <Resource Include="resources\icons\avoidmep_16.png" LogicalName="resources/icons/avoidmep_16.png" />
+    <Resource Include="resources\icons\e9045_16.png" LogicalName="resources/icons/e9045_16.png" />
+    <Resource Include="resources\icons\fittingrotate_32.png" LogicalName="resources/icons/fittingrotate_32.png" />
+    <Resource Include="resources\icons\connectto16.png" LogicalName="resources/icons/connectto16.png" />
+    <Resource Include="resources\icons\cropviewport_16.png" LogicalName="resources/icons/cropviewport_16.png" />
+    <Resource Include="resources\icons\up45arrow_32.png" LogicalName="resources/icons/up45arrow_32.png" />
+    <Resource Include="resources\icons\connectto32.png" LogicalName="resources/icons/connectto32.png" />
+    <Resource Include="resources\icons\cropviewport_32.png" LogicalName="resources/icons/cropviewport_32.png" />
+    <Resource Include="ui\ui_selectelementsbylevelactionwindow.baml" LogicalName="ui/ui_selectelementsbylevelactionwindow.baml" />
+    <Resource Include="resources\icons\up45arrow_16.png" LogicalName="resources/icons/up45arrow_16.png" />
+    <Resource Include="resources\icons\titlecheck_16.png" LogicalName="resources/icons/titlecheck_16.png" />
+    <Resource Include="resources\icons\savesyncview_16.png" LogicalName="resources/icons/savesyncview_16.png" />
+    <Resource Include="resources\icons\titlecheck_32.png" LogicalName="resources/icons/titlecheck_32.png" />
+    <Resource Include="resources\icons\savesyncview_32.png" LogicalName="resources/icons/savesyncview_32.png" />
+    <Resource Include="resources\icons\down90arrow_16.png" LogicalName="resources/icons/down90arrow_16.png" />
+    <Resource Include="resources\icons\asheets_32.png" LogicalName="resources/icons/asheets_32.png" />
+    <Resource Include="resources\icons\down90arrow_32.png" LogicalName="resources/icons/down90arrow_32.png" />
+    <Resource Include="resources\icons\asheets_16.png" LogicalName="resources/icons/asheets_16.png" />
+    <Resource Include="resources\icons\dsheets_32.png" LogicalName="resources/icons/dsheets_32.png" />
+    <Resource Include="resources\icons\vent_32.png" LogicalName="resources/icons/vent_32.png" />
+    <Resource Include="resources\icons\dsheets_16.png" LogicalName="resources/icons/dsheets_16.png" />
+    <Resource Include="resources\icons\ey_32.png" LogicalName="resources/icons/ey_32.png" />
+    <Resource Include="resources\icons\vent_16.png" LogicalName="resources/icons/vent_16.png" />
+    <Resource Include="resources\icons\ey_16.png" LogicalName="resources/icons/ey_16.png" />
+    <Resource Include="resources\icons\disvent_16.png" LogicalName="resources/icons/disvent_16.png" />
+    <Resource Include="ui\ui_autodimcachesettingswindow.baml" LogicalName="ui/ui_autodimcachesettingswindow.baml" />
+    <Resource Include="resources\icons\lineweight_16.png" LogicalName="resources/icons/lineweight_16.png" />
+    <Resource Include="ui\ui_3dsyncwindow.baml" LogicalName="ui/ui_3dsyncwindow.baml" />
+    <Resource Include="resources\icons\disvent_32.png" LogicalName="resources/icons/disvent_32.png" />
+    <Resource Include="resources\icons\pluss_32.png" LogicalName="resources/icons/pluss_32.png" />
+    <Resource Include="resources\icons\lineweight_32.png" LogicalName="resources/icons/lineweight_32.png" />
+    <Resource Include="resources\icons\dwg_32.png" LogicalName="resources/icons/dwg_32.png" />
+    <Resource Include="resources\icons\pluss_16.png" LogicalName="resources/icons/pluss_16.png" />
+    <Resource Include="resources\icons\dwg_16.png" LogicalName="resources/icons/dwg_16.png" />
+    <Resource Include="resources\icons\align3d32.png" LogicalName="resources/icons/align3d32.png" />
+    <Resource Include="resources\icons\align3d16.png" LogicalName="resources/icons/align3d16.png" />
+    <Resource Include="resources\icons\up90arrow_32.png" LogicalName="resources/icons/up90arrow_32.png" />
+    <Resource Include="resources\icons\up90arrow_16.png" LogicalName="resources/icons/up90arrow_16.png" />
+    <Resource Include="ui\ui_gridplaceelementsettingswindow.baml" LogicalName="ui/ui_gridplaceelementsettingswindow.baml" />
+    <Resource Include="ui\ui_findreplaceparameterwindow.baml" LogicalName="ui/ui_findreplaceparameterwindow.baml" />
+    <Resource Include="ui\ui_selectbyidswindow.baml" LogicalName="ui/ui_selectbyidswindow.baml" />
+    <Resource Include="ui\ui_selectelementsbylevelscopewindow.baml" LogicalName="ui/ui_selectelementsbylevelscopewindow.baml" />
+    <Resource Include="ui\ui_autotagpipewindow.baml" LogicalName="ui/ui_autotagpipewindow.baml" />
+    <Resource Include="ui\ui_selectlevelwindow.baml" LogicalName="ui/ui_selectlevelwindow.baml" />
+    <Resource Include="resources\icons\layerpipe_16.png" LogicalName="resources/icons/layerpipe_16.png" />
+    <Resource Include="resources\icons\layerpipe_32.png" LogicalName="resources/icons/layerpipe_32.png" />
+    <Resource Include="ui\ui_copygridviewfloorwindow.baml" LogicalName="ui/ui_copygridviewfloorwindow.baml" />
+    <Resource Include="ui\ui_changesheettitleblocktypewindow.baml" LogicalName="ui/ui_changesheettitleblocktypewindow.baml" />
+    <Resource Include="resources\icons\ribbonicon16.png" LogicalName="resources/icons/ribbonicon16.png" />
+    <Resource Include="resources\icons\excel_16.png" LogicalName="resources/icons/excel_16.png" />
+    <Resource Include="resources\icons\ribbonicon32.png" LogicalName="resources/icons/ribbonicon32.png" />
+    <Resource Include="ui\ui_putviewsinsheetwindow.baml" LogicalName="ui/ui_putviewsinsheetwindow.baml" />
+    <Resource Include="resources\icons\extendfitting16.png" LogicalName="resources/icons/extendfitting16.png" />
+    <Resource Include="resources\icons\excel_32.png" LogicalName="resources/icons/excel_32.png" />
+    <Resource Include="ui\ui_rerouteunderoverwindow.baml" LogicalName="ui/ui_rerouteunderoverwindow.baml" />
+    <Resource Include="resources\icons\extendfitting32.png" LogicalName="resources/icons/extendfitting32.png" />
+    <Resource Include="resources\icons\printer_16.png" LogicalName="resources/icons/printer_16.png" />
+    <Resource Include="resources\icons\setworkset_32.png" LogicalName="resources/icons/setworkset_32.png" />
+    <Resource Include="resources\icons\printer_32.png" LogicalName="resources/icons/printer_32.png" />
+    <Resource Include="resources\icons\setworkset_16.png" LogicalName="resources/icons/setworkset_16.png" />
+    <Resource Include="ui\ui_copyvgwindow.baml" LogicalName="ui/ui_copyvgwindow.baml" />
+    <Resource Include="ui\ui_convertdraftingtolegendwindow.baml" LogicalName="ui/ui_convertdraftingtolegendwindow.baml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WindowsBase" />
+    <Reference Include="TungMEP2.PrintSheets">
+      <HintPath>..\..\lib\TungMEP2.PrintSheets.dll</HintPath>
+      <Aliases>LegacyPrintSheets</Aliases>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Nice3point.Revit.Toolkit">
+      <HintPath>..\..\lib\Nice3point.Revit.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(Revit2024Path)\RevitAPIUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Nice3point.Revit.Extensions">
+      <HintPath>..\..\lib\Nice3point.Revit.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>$(Revit2024Path)\RevitAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Core" />
+    <Reference Include="HandyControl">
+      <HintPath>..\..\lib\HandyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\lib\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharpCore">
+      <HintPath>..\..\lib\PdfSharpCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UglyToad.PdfPig">
+      <HintPath>..\..\lib\UglyToad.PdfPig.dll</HintPath>
+    </Reference>
+    <Reference Include="UglyToad.PdfPig.Core">
+      <HintPath>..\..\lib\UglyToad.PdfPig.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\lib\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\..\lib\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System.Memory">
+      <HintPath>..\..\lib\System.Memory.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

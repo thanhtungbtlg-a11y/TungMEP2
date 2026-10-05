@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PipeSpacingMathConsoleTest.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\PipeSpacing\PipeSpacingModel.cs"
+             Link="PipeSpacingModel.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\PipeSpacing\PipeSpacingMath.cs"
+             Link="PipeSpacingMath.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\PipeSpacing\PipeSpacingTraversalPolicy.cs"
+             Link="PipeSpacingTraversalPolicy.cs" />
+    <Compile Include="..\src\TungMEP2\Core\Internal\Ctn\PipeSpacing\PipeSpacingAnalysisPolicy.cs"
+             Link="PipeSpacingAnalysisPolicy.cs" />
+  </ItemGroup>
+</Project>
